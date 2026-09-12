@@ -1,0 +1,186 @@
+reset-interval: 15m
+active-quest-count: 3
+claim-radius: 6
+
+bossbar:
+  enabled: false
+  color: YELLOW
+  cycle-seconds: 5
+
+messages:
+  reset: '&#ff9900&lQUESTS &8» &fNew quests are now available! Use &#7afc00/quests&f.'
+  completed: '&#7afc00&lQUEST COMPLETE! &fYou completed &e%quest%&f.'
+  click-to-claim: '&#ff9900&l[CLICK TO TELEPORT TO THE QUEST NPC]'
+  claim-hover: '&fTeleport to the Quest NPC, then click your completed quest to receive $%reward%.'
+  returned-to-npc: '&fYou returned for &e%quest%&f. Click the completed quest in the menu to receive your money.'
+  claim-near-npc: '&cYou must return to the Quest NPC before claiming this reward. Click the teleport message in chat.'
+  claimed: '&#7afc00&lREWARD CLAIMED! &fYou received &#7afc00$%reward%&f for &e%quest%&f.'
+  payout-failed: '&cVault could not add your reward. Your reward is still available—please try again or contact an administrator.'
+  selected: '&#7afc00&lQUEST SELECTED! &fYou selected &e%quest%&f.'
+  already-selected: '&eYou already selected this quest.'
+  finish-selected: '&cYou can only work on one quest at a time. Finish your selected quest first.'
+  already-claimed: '&cYou have already claimed this quest reward.'
+  claim-expired: '&cThat quest reward is no longer available.'
+  npc-not-set: '&cThe Quest NPC location has not been set. Ask an administrator to use /quests setnpc.'
+  npc-set: '&aQuest NPC location saved at your current position.'
+  progress: '&8[&#ff9900Quest&8] &f%quest%: &#7afc00%progress%&7/&#7afc00%required%'
+  reload: '&aMagicQuests configuration reloaded.'
+  time-changed: '&aQuest reset time changed to &f%time%&a.'
+  economy-missing: '&cNo Vault economy provider was found.'
+
+sounds:
+  complete: ENTITY_PLAYER_LEVELUP
+  progress: BLOCK_NOTE_BLOCK_PLING
+  selected: UI_BUTTON_CLICK
+  error: ENTITY_VILLAGER_NO
+
+npc-location: {}
+
+quests:
+  stone_miner:
+    type: BREAK
+    target: STONE
+    required: 128
+    reward: 2500
+    name: Stone Miner
+    icon: STONE
+  coal_miner:
+    type: BREAK
+    target: COAL_ORE
+    required: 32
+    reward: 3000
+    name: Coal Miner
+    icon: COAL
+  iron_miner:
+    type: BREAK
+    target: IRON_ORE
+    required: 24
+    reward: 4500
+    name: Iron Miner
+    icon: IRON_INGOT
+  diamond_miner:
+    type: BREAK
+    target: DIAMOND_ORE
+    required: 8
+    reward: 8000
+    name: Diamond Miner
+    icon: DIAMOND
+  ancient_miner:
+    type: BREAK
+    target: ANCIENT_DEBRIS
+    required: 4
+    reward: 10000
+    name: Ancient Miner
+    icon: ANCIENT_DEBRIS
+  lumberjack:
+    type: BREAK
+    target: OAK_LOG
+    required: 64
+    reward: 3000
+    name: Lumberjack
+    icon: OAK_LOG
+  sand_digger:
+    type: BREAK
+    target: SAND
+    required: 96
+    reward: 2500
+    name: Sand Digger
+    icon: SAND
+  gravel_digger:
+    type: BREAK
+    target: GRAVEL
+    required: 96
+    reward: 2500
+    name: Gravel Digger
+    icon: GRAVEL
+  wheat_farmer:
+    type: BREAK
+    target: WHEAT
+    required: 64
+    reward: 3000
+    name: Wheat Farmer
+    icon: WHEAT
+  potato_farmer:
+    type: BREAK
+    target: POTATOES
+    required: 64
+    reward: 3000
+    name: Potato Farmer
+    icon: POTATO
+  carrot_farmer:
+    type: BREAK
+    target: CARROTS
+    required: 64
+    reward: 3000
+    name: Carrot Farmer
+    icon: CARROT
+  sugar_cane_farmer:
+    type: BREAK
+    target: SUGAR_CANE
+    required: 64
+    reward: 3500
+    name: Sugar Cane Farmer
+    icon: SUGAR_CANE
+  zombie_hunter:
+    type: KILL
+    target: ZOMBIE
+    required: 20
+    reward: 4000
+    name: Zombie Hunter
+    icon: ZOMBIE_HEAD
+  skeleton_hunter:
+    type: KILL
+    target: SKELETON
+    required: 20
+    reward: 4000
+    name: Skeleton Hunter
+    icon: SKELETON_SKULL
+  creeper_hunter:
+    type: KILL
+    target: CREEPER
+    required: 12
+    reward: 5000
+    name: Creeper Hunter
+    icon: CREEPER_HEAD
+  spider_hunter:
+    type: KILL
+    target: SPIDER
+    required: 20
+    reward: 3500
+    name: Spider Hunter
+    icon: SPIDER_EYE
+  cow_hunter:
+    type: KILL
+    target: COW
+    required: 16
+    reward: 3000
+    name: Cow Hunter
+    icon: BEEF
+  pig_hunter:
+    type: KILL
+    target: PIG
+    required: 16
+    reward: 3000
+    name: Pig Hunter
+    icon: PORKCHOP
+  builder:
+    type: PLACE
+    target: COBBLESTONE
+    required: 128
+    reward: 3000
+    name: Cobblestone Builder
+    icon: COBBLESTONE
+  glass_builder:
+    type: PLACE
+    target: GLASS
+    required: 64
+    reward: 3500
+    name: Glass Builder
+    icon: GLASS
+  fisher:
+    type: FISH
+    target: ANY
+    required: 12
+    reward: 4500
+    name: Fisher
+    icon: FISHING_ROD

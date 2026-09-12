@@ -1,0 +1,19 @@
+name: MagicQuests
+version: '1.3.0'
+main: com.magicsmp.quests.MagicQuestsPlugin
+api-version: '1.21'
+author: MagicSMP
+description: Rotating quests with Vault rewards and synchronized timers
+depend: [Vault]
+softdepend: [PlaceholderAPI, FancyNpcs, FancyHolograms]
+commands:
+  quests:
+    description: Open the active quests menu
+    usage: /quests [reload|reset|settime|setnpc]
+    aliases: [quest]
+    permission: magicquests.use
+permissions:
+  magicquests.use:
+    default: true
+  magicquests.admin:
+    default: op
